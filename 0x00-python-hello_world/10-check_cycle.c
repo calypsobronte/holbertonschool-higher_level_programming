@@ -13,7 +13,7 @@ temp2 = temp1[0].next;
 
 if (list == NULL || list[0].next == NULL)
 return (0);
-while (temp1 != NULL && temp2[0].next != NULL && temp2->next->next != NULL)
+while (temp1 != NULL && temp2[0].next != NULL && temp2->next->next != NULL && temp2 != NULL)
 {
 if (temp1 == temp2)
 return (1);
