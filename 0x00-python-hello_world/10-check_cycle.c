@@ -11,8 +11,6 @@ listint_t *temp1, *temp2;
 temp1 = list;
 temp2 = list->next;
 
-if (list == NULL || list->next == NULL)
-return (0);
 while (temp1 != NULL && temp2->next != NULL && temp2->next->next != NULL &&
 temp2 != NULL)
 {
