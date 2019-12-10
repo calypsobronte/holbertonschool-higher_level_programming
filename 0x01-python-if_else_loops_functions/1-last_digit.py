@@ -11,9 +11,9 @@ else:
 if last > 5:
     print("Last digit of {:d} is {:d} and is greater than 5\n"
           .format(number, last))
-elif last == 0:
-    print("Last digit of {:d} is {:d} and is 0\n"
-          .format(number, last))
 elif (last < 0 and last < 5) or (last <= 5 and last != 0):
     print("Last digit of {:d} is {:d} and is less than 6 and not 0\n"
+          .format(number, last))
+elif last == 0:
+    print("Last digit of {:d} is {:d} and is 0\n"
           .format(number, last))
