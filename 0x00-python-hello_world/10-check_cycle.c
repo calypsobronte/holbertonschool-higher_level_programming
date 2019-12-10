@@ -13,11 +13,13 @@ temp2 = temp1->next;
 
 if (list == NULL || list->next == NULL)
 return (0);
-while (temp1 != NULL && temp2->next != NULL && temp2->next->next != NULL && 
+while (temp1 != NULL && temp2->next != NULL && temp2->next->next != NULL &&
 temp2 != NULL)
 {
 if (temp1 == temp2)
+{
 return (1);
+}
 temp1 = temp1->next;
 temp2 = temp2->next->next;
 }
