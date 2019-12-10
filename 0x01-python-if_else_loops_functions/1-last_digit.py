@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-if number < 0:
-    number = number * -1
+last = number % 10
+if last < 0:
+    last = last * -1
 if (number % 10) < 6 and (number % 10) != 0:
     print("Last digit of {:d} is {:d} and is less than 6 and not 0\n".format(number, (number % 10)))
 elif (number % 10) == 0:
