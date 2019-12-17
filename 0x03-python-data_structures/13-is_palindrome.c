@@ -14,7 +14,7 @@ for (i = 0; i < len; i++)
 {
 if ((*head[i]).n != (*head[len - 1 - i]).n)
 {
-return (1);
+return (0);
 }
 }
 return (1);
