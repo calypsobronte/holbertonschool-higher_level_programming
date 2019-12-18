@@ -2,11 +2,11 @@
 int is_palindrome(listint_t **head)
 {
 int len = 0, i, j, array[3000];
-if (!head || !(*head) || (*head)->next == NULL)
+if (head == NULL || *head == NULL || (*head)->next == NULL)
 {
 return (1);
 }
-while (*head)
+while (*head != NULL)
 {
 array[len] = (*head)->n;
 *head = (*head)->next;
