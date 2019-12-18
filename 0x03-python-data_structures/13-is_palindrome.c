@@ -2,22 +2,32 @@
 int is_palindrome(listint_t **head)
 {
 int len = 0, i;
+listint_t *tem2 = *head, *tem1 = *head;
 if (head == NULL)
+{
 return (0);
+}
 if (*head == NULL || (*head)->next == NULL)
 {
 return (1);
 }
-while (head[len] != NULL)
+while (tem2->next != NULL)
 {
+tem2 = tem2->next;
 len++;
 }
-for (i = 0; i < len; i++)
+if (len == 0)
 {
-if ((*head[i]).n != (*head[len - 1 - i]).n)
+return (1);
+}
+for (i = 0; i < len / 2; i++)
+{
+if (tem1->n != tem2->n)
 {
 return (0);
 }
+tem1++;
+tem1--;
 }
 return (1);
 }
