@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     result = 0
-    convert_roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    convert_roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500,
+                     'M': 1000}
     if len(roman_string) > 0:
         vlr_previous = 0
     for letter in roman_string:
