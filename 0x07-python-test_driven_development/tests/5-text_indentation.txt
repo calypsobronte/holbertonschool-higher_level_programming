@@ -1,1 +1,33 @@
-"" TEST ""
+====================
+4. Text indentation module:
+====================
+
+Import module:
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Function:
+=======.
+Write a function that prints a text
+
+Operations:
+=========
+
+>>> text_indentation("   ?:.   ")
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> text_indentation("  holis ")
+holis 
+
+
+In case of error:
+
+>>> text_indentation()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
