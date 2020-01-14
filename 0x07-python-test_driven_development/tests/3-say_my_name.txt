@@ -20,24 +20,15 @@ My name is  Holberton
 >>> say_my_name("Gladiz", 'Ramirez Ardila')
 My name is Gladiz Ramirez Ardila
 
->>> say_my_name("Vanessa", "")
-My name is Vanessa 
+>>> my_name("Vanessa", "Rojas")
+My name is Vanessa Rojas
 
->>> say_my_name("", "")
-My name is  
-
->>> say_my_name("Dolar")
-My name is Dolar 
-
->>> my_name("Juan", "Perez")
-My name is Juan Perez
-
->>> my_name(12, "Perez")
+>>> my_name(12, "Rojas")
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 
->>> my_name("Juan", 12)
+>>> my_name("Vanessa", 12)
 Traceback (most recent call last):
 ...
 TypeError: last_name must be a string
@@ -47,5 +38,5 @@ Traceback (most recent call last):
 ...
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
->>> my_name("Juan")
-My name is Juan 
+>>> my_name("Vanessa")
+My name is Vanessa 
