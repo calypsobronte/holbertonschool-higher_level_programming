@@ -1,13 +1,16 @@
-The ``0-add_integer`` module
-======================
+===============================
+0. Integer addition module
+===============================
 
-Using ``add_integer``
---------------------
-
-First import ``add_integer`` from the ``0-add_integer`` module:
+Import module:
+==============
 >>> add_integer = __import__('0-add_integer').add_integer
 
-Now use it:
+Function:
+=========
+Write a function that adds 2 integers.
+
+Operations:
 
 >>> add_integer(3, 2)
 5
@@ -21,7 +24,7 @@ Now use it:
 >>> add_integer(0, 0)
 0
 
-This is how to  use it with various input:
+Test:
 # input float and int
 >>> add_integer(7.0, 4)
 11
