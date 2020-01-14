@@ -11,50 +11,37 @@ Write a function that prints My name is <first name> <last name>
 
 Operations:
 =========================
-Test case #0: A test case without parameters
-    >>> say_my_name()
-    Traceback (most recent call last):
-    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+>>> say_my_name("Lina", "Montano")
+My name is Lina Montano
 
->>> say_my_name("John", "Smith")
-My name is John Smith
+>>> say_my_name('Vanessa')
+My name is Vanessa 
 
->>> say_my_name("Walter", "White")
-My name is Walter White
+>>> say_my_name("Gladiz", 'Ramirez Ardila')
+My name is Gladiz Ramirez Ardila
 
->>> say_my_name("Bob")
-My name is Bob 
+incorrect cases:
 
->>> say_my_name(3)
+>>> say_my_name("hola", "Mundo", "27")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> say_my_name(('bye', 'gps'), "root")
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
->>> say_my_name(None)
+>>> say_my_name(49)
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
->>> say_my_name("")
-My name is  
+>>> say_my_name(2333, 12)
+Traceback (most recent call last):
+TypeError: first_name must be a string
 
->>> say_my_name("Baby")
-My name is Baby 
+>>> say_my_name((1992, 27), "hola")
+Traceback (most recent call last):
+TypeError: first_name must be a string
 
->>> say_my_name(" ", "Riaño")
-My name is   Riaño
-
->>> say_my_name(" ", " ")
-My name is    
-
->>> say_my_name("", "")
-My name is  
-
-Test case #11: A test case with two new lines
->>> say_my_name('\n', '\n')
-My name is 
-<BLANKLINE>
-<BLANKLINE>
-
-‘first_name’ must be a string:
-    >>> say_my_name(True, "Gomez")
-    Traceback (most recent call last):
-    TypeError: first_name must be a string
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
