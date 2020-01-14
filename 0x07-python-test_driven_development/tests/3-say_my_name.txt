@@ -20,8 +20,6 @@ My name is  Holberton
 >>> say_my_name("Gladiz", 'Ramirez Ardila')
 My name is Gladiz Ramirez Ardila
 
-=============================
-
 >>> say_my_name("Vanessa", "")
 My name is Vanessa 
 
@@ -31,45 +29,23 @@ My name is
 >>> say_my_name("Dolar")
 My name is Dolar 
 
-==============================
-incorrect cases:
+>>> my_name("Juan", "Perez")
+My name is Juan Perez
 
->>> say_my_name(('bye', 'gps'), "root")
+>>> my_name(12, "Perez")
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "3-say_my_name.py", line 4, in say_my_name
-    raise TypeError("first_name must be a string")
+...
 TypeError: first_name must be a string
 
->>> say_my_name(49)
+>>> my_name("Juan", 12)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "3-say_my_name.py", line 4, in say_my_name
-    raise TypeError('first_name must be a string')
-TypeError: first_name must be a string
+...
+TypeError: last_name must be a string
 
->>> say_my_name(2333, 12)
+>>> my_name()
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "3-say_my_name.py", line 4, in say_my_name
-    raise TypeError('first_name must be a string')
-TypeError: first_name must be a string
-
->>> say_my_name((1992, 27), "hola")
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "3-say_my_name.py", line 4, in say_my_name
-    raise TypeError('first_name must be a string')
-TypeError: first_name must be a string
-
->>> say_my_name()
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
+...
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
->>> say_my_name(19, 27)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/calypsobronte/Holberton-School/Github/holbertonschool-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 4, in say_my_name
-    raise TypeError("first_name must be a string")
-TypeError: first_name must be a string
+>>> my_name("Juan")
+My name is Juan 
