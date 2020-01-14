@@ -11,15 +11,6 @@ Write a function that prints My name is <first name> <last name>
 
 Operations:
 =========================
->>> say_my_name("Lina", "Montano")
-My name is Lina Montano
-
->>> say_my_name("", "Holberton")
-My name is  Holberton
-
->>> say_my_name("Gladiz", 'Ramirez Ardila')
-My name is Gladiz Ramirez Ardila
-
 >>> my_name("Vanessa", "Rojas")
 My name is Vanessa Rojas
 
