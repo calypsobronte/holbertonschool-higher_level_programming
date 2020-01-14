@@ -27,4 +27,6 @@ def matrix_divided(matrix, div):
 
     size = len(elements)
 
-    return [[round((f[i]/div), 2) for i in range(len(f))] for f in matrix]
+    mat = [[round((f[i]/div), 2) for i in range(len(f))] for f in matrix]
+
+    return mat
