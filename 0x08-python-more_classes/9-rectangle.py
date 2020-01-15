@@ -5,7 +5,15 @@ class Rectangle():
 
     @classmethod
     def square(cls, size=0):
-        return cls(size, size)
+        return cls(width=size, height=size)
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        return (rect_2 if rect_2.area() > rect_1.area() else rect_1)
 
     def __init__(self, width=0, height=0):
         self.height = height
@@ -58,11 +66,3 @@ class Rectangle():
     def __del__(self):
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        return (rect_2 if rect_2.area() > rect_1.area() else rect_1)
