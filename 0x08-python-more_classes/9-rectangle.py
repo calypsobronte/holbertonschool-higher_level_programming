@@ -57,17 +57,22 @@ class Rectangle:
             return perimeter
 
     def __str__(self):
+        character = ''
         if self.__height == 0 or self.__width == 0:
-            return ''
-        return '\n'.join(str(self.print_symbol) * self.__width
-                         for _ in range(self.__height))
+            return character
+
+        for x in range(self.__height):
+            character += str(self.print_symbol)*self.__width
+            if x < self.__height-1:
+                character += '\n'
+        return character
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         print('Bye rectangle...')
-        Rectangle.number_of_instances -= 1
+        type(self).number_of_instances -= 1
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
