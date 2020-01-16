@@ -1,0 +1,111 @@
+type()
+=========== 1
+id()
+=========== 2
+>>> a = 89
+>>> b = 100
+>>> a == b
+False
+>>> a is b
+False
+=========== 3
+>>> a = 89
+>>> b = 89
+>>> a == b
+True
+>>> a is b
+True
+=========== 4
+>>> a = 89
+>>> b = 89
+>>> b = a
+>>> a is b
+True
+>>> a == b
+True
+=========== 5
+>>> a = 89
+>>> b = 89
+>>> b = a + 1
+>>> a is b
+False
+>>> a == b
+False
+=========== 6
+>>> s1 = "Holberton"
+>>> s2 = s1
+>>> print(s1 == s2)
+True
+=========== 7
+>>> s1 = "Holberton"
+>>> s2 = s1
+>>> print(s1 is s2)
+True
+=========== 8
+>>> s1 = "Holberton"
+>>> s2 = "Holberton"
+>>> print(s1 == s2)
+True
+=========== 9
+>>> s1 = "Holberton"
+>>> s2 = "Holberton"
+>>> print(s1 is s2)
+True
+=========== 10
+>>> l1 = [1, 2, 3]
+>>> l2 = [1, 2, 3]
+>>> print(l1 == l2)
+True
+=========== 11
+>>> l1 = [1, 2, 3]
+>>> l2 = [1, 2, 3]
+>>> print(l1 is l2)
+False
+=========== 12
+>>> l1 = [1, 2, 3]
+>>> l2 = l1
+>>> print(l1 == l2)
+True
+=========== 13
+>>> l1 = [1, 2, 3]
+>>> l2 = l1
+>>> print(l1 is l2)
+True
+=========== 14
+>>> l1 = [1, 2, 3]
+>>> l2 = l1
+>>> l1.append(4)
+>>> print(l2)
+[1, 2, 3, 4]
+============ 15
+>>> l1 = [1, 2, 3]
+>>> l2 = l1
+>>> l1 = l1 + [4]
+>>> print(l2)
+[1, 2, 3]
+============ 16
+def increment(n):
+    n += 1
+
+a = 1
+increment(a)
+print(a)
+1
+============ 17
+def increment(n):
+    n.append(4)
+
+l = [1, 2, 3]
+increment(l)
+print(l)
+[1, 2, 3, 4]
+============= 18
+def assign_value(n, v):
+    n = v
+
+l1 = [1, 2, 3]
+l2 = [4, 5, 6]
+assign_value(l1, l2)
+print(l1)
+[1, 2, 3]
+============== 19
