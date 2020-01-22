@@ -12,4 +12,4 @@ try:
     file_list = load_from_json_file("add_item.json")
 except IOError:
     file_list = []
-    save_to_json_file(point + file_list, "add_item.json")
+save_to_json_file(point + file_list, "add_item.json")
