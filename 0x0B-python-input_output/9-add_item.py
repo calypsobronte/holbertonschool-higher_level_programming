@@ -10,6 +10,6 @@ point = sys.argv[1:]
 
 try:
     file_list = load_from_json_file("add_item.json")
-except FileNotFoundError:
+except IOError:
     file_list = []
     save_to_json_file(point + file_list, "add_item.json")
