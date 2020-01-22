@@ -4,4 +4,4 @@ import json
 
 def load_from_json_file(filename):
     with open(filename, 'r', encoding='utf-8') as target:
-        return json.loads(target)
+        return json.load(target)
