@@ -64,18 +64,19 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        if cls.__name__ == "Rectangle":
-            head = "id,width,height,x,y"
-        elif cls.__name__ == "Square":
-            head = "id,size,x,y"
-        save_obj = ""
-        for obj in list_objs:
-            obj = obj.to_dictionary()
-            attrs = head.split(",")
-            save_obj += ",".join([str(obj[key]) for key in attrs])
-            save_obj += "\n"
-            string = "\n".join([head, save_obj])
-            filename = cls.__name__ + ".csv"
-            with open(filename, "w") as file:
-                file.write(string)
+        """Serializes in CSV"""
+        filename = cls.__name__ + ".csv"
+        objs = [cls.to_dictionary(obj) for obj in list_objs]
+        try:
+            with open(filename, mode="w", encoding="utf-8") as f:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    fieldnames = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writeheader()
+                for obj in objs:
+                    writer.writerow(obj)
+        except BaseException:
+            return "[]"
 
