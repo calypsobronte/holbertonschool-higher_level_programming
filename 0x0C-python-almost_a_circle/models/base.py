@@ -98,4 +98,3 @@ class Base:
                 dic = {key: int(obj[i].strip()) for i, key in enumerate(attrs)}
                 array.append(cls.create(**dic))
             return array
-
