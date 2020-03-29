@@ -4,6 +4,7 @@ from sqlalchemy import Column, Integer, String, Sequence, ForeignKey
 
 Base = declarative_base()
 
+
 class City(Base):
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True)
