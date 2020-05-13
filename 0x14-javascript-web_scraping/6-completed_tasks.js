@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const fs = require('fs');
+const fs = require('request');
 
 fs(process.argv[2], { json: true }, (error, response, body) => {
   if (error) { console.log(error); } else {
