@@ -1,8 +1,10 @@
 #!/usr/bin/node
 const fs = require('request');
-fs.get('http://swapi.co/api/films/' + process.argv[2] + '/', function (error, response, body) {
-  if (error) throw error;
-  else if (response.statusCode === 200) {
-    console.log(JSON.parse(body).title);
+
+fs('https://swapi-api.hbtn.io/api/films/' + process.argv.slice(2)[0], function (error, body) {
+  if (JSON.parse(body.body).title !== undefined) {
+    console.log(JSON.parse(body.body).title);
+    return;
   }
+  console.log(error);
 });
