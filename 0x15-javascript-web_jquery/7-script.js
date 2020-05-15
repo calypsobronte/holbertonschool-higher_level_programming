@@ -1,1 +1,3 @@
-$.get('https://swapi-api.hbtn.io/api/people/5/?format=json', (data) => $('DIV#character').text(data.name);, "json");
+$.get( "https://swapi.co/api/people/5/?format=json", function(data) {
+    $( "DIV#character" ).text(data.name);
+  });
